@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularOntouchModule, TouchDirective } from 'projects/angular-ontouch/src/public-api';
 
 @NgModule({
   declarations: [
@@ -10,9 +11,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularOntouchModule
   ],
-  providers: [],
+  providers: [
+    TouchDirective
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
